@@ -11,14 +11,110 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/js/fetchImage.js"></script>
 
+    
 
 
 </head>
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    .login-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    .login-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .login-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .login-form button:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        /* display: none; */
+    }
+</style>
+
+<div class="login-container" id="login-container">
+    <div class="login-form">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p style="text-align:center; color:red;" id="error-message"></p>
+    </div>
+</div>
+
+<script>
+    const correctUsername = 'admin'; // Set your correct username
+    const correctPassword = 'admin123'; // Set your correct password
+
+    const loginForm = document.getElementById('login-form');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const loginContainer = document.getElementById('login-container');
+    const adminContainer = document.getElementById('admin-container');
+    const errorMessage = document.getElementById('error-message');
+
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        if (username === correctUsername && password === correctPassword) {
+            $("#adminPanelContainer").show();
+            $("#login-container").hide();
+            
+        } else {
+            errorMessage.textContent = 'Incorrect username or password!';
+        }
+    });
+</script>
+
 <body>
-    <div class="container">
-        <h1
-            style="text-align: center; 
+    <div class="container" id="adminPanelContainer" style="display: none;">
+        <h1 style="text-align: center; 
                    font-size: 2em; 
                    color: white; 
                    margin: 0; 
@@ -145,7 +241,7 @@
                     style="flex: 1; padding: 10px 20px; background-color: #0044cc; color: #fff; cursor: pointer; font-weight: bold; border-radius: 5px; text-align: center; display: inline-block; margin-right: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
                     Upload Image
                 </label>
-                <input type="file" accept="image/*" id="imageUpload" style="display: none;" onchange="previewImage();">
+                <!-- <input type="file" accept="image/*" id="imageUpload" style="display: none;" onchange="previewImage();"> -->
 
                 <input type="submit" name="addGem" value="Submit"
                     style="flex: 1; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1em; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
