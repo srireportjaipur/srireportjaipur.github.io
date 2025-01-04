@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <title>Sri Labs Jaipur, India</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+    <!-- jQuery (Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/fetchImage.js"></script>
+    <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="css/card.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <link href="css/top-header.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Sri Labs Jaipur, India " />
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,900italic,400,700,900'
+        rel='stylesheet' type='text/css'>
+    <!--webfont-->
+    <!-- dropdown -->
+    <script src="js/jquery.easydropdown.js"></script>
+    <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/modernizr.custom.js"></script>
+    <!--js-->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
+    </script>
+    <div class="banner-bg banner-bg1 page-head">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href=""><img id="logoimg" src="images/logo.png" alt="kgtl-logo"></a><a id="logo-text">Sri
+                        Labs</br> Jaipur, RAJASTHAN</a>
+
+                    
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---- start-smoth-scrolling---->
+
+
+</head>
+
+<body onload="autoClick();">
+    <!--banner-->
+
+
+
+
+    <!-- Form -->
+    <div class="container" id="formForSearch" style="width: 100%; max-width: 600px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <h3 class="search" style="text-align: center; font-size: 24px; font-weight: bold; color: #388E3C; margin-bottom: 20px;">
+            Search Results
+        </h3>
+        <div class="grid_3 grid_5">
+            <form action="#" method="get" style="display: flex; flex-direction: column; gap: 15px; background-color:white;">
+                <label style="font-size: 14px; font-weight: bold; color: #333;">Report No:</label>
+                <input type="text" name="reportNo" value="SRI/AA/" required="" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
+    
+                <label for="service-" style="font-size: 14px; font-weight: bold; color: #333;">Weight:</label>
+                <input type="text" name="weight" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
+    
+                <input type="submit" name="Search" value="Search" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #388E3C; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+                </form>
+        </div>
+    </div>
+    
+    <script>
+        // Add hover and active states for the submit button using JavaScript
+        const submitButton = document.querySelector('input[type="submit"]');
+        submitButton.addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#2c6e2a';
+        });
+        submitButton.addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#388E3C';
+        });
+        submitButton.addEventListener('mousedown', function() {
+            this.style.backgroundColor = '#2b5d27';
+        });
+        submitButton.addEventListener('mouseup', function() {
+            this.style.backgroundColor = '#2c6e2a';
+        });
+    </script>
+    
+
+
+
+
+    <!-- Card  -->
+
+    <div style="height: 20px;"></div>
+    <div id="reportCard" style="
+    width: calc(100% - 10px); /* Full width minus 10px for margins */
+    max-width: 794px;        /* A4 width in pixels */
+    height: calc((calc(100% - 10px)) * 1.414); /* Height calculated dynamically based on width */
+    max-height: 1123px;      /* A4 height in pixels */
+    margin: 0 auto;          /* Center horizontally */
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+    font-size: 12px; 
+    display: none;
+    border-radius: 15px; 
+    background-color: #e8f9e1; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;">
+
+
+        <div style="text-align: center; margin-bottom: 10px;">
+            <table style="background-color: white; width: 100%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        padding: 0px; margin-bottom: 0px; border: 1px solid #388E3C; border-collapse: separate; overflow: hidden;">
+                <tr>
+                    <th rowspan="2"
+                        style="width: 15%; text-align: center; background-color: white; padding: 10px; border: none;">
+                        <img src="images/logo.png" alt="Logo" style="max-height: 30px;">
+                    </th>
+                    <th colspan="3" style="width: 70%; font-size: 16px; color: #388E3C; font-weight: bold; background-color: white; 
+                text-align: center; border: none; padding-left: 5px;">
+                        <strong>SRI LAB REPORT</strong>
+                    </th>
+                    <th rowspan="2"
+                        style="width: 15%; text-align: center; background-color: white; padding: 10px; border: none;">
+                        <img src="images/diamond.png" alt="Microscope"
+                            style="max-height: 30px;">
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="1"
+                        style="font-size: 12px; color: #333; text-align: center; padding: 10px; border: none;">
+                        <strong>Gopal GK Road, Jaipur (Rajasthan)</strong>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center; font-weight: bold; margin: 15px auto; border-radius: 30px; background-color: #388E3C; 
+        color: #fff; padding: 10px; width: 100%; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);">
+            Gems Testing Report
+        </div>
+        <div style="border-radius: 10px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); margin-bottom: 10px; 
+        background-color: white; padding: 5px; margin-bottom: 15px; border: 1px solid #4CAF50;">
+            <table style="max-width: 100%; border-color: white; background-color: white; border-collapse: collapse;">
+                <tr>
+                    <th style="text-align: left; padding: 5px; width: 25%; background-color: white;">Submitted By</th>
+                    <td id="submittedBy" style="padding: 5px; width: 40%; background-color: white;" colspan="2"></td>
+                    <td id="refNo" style="text-align: center; padding: 5px; width: 35%; background-color: white;">
+                        <strong>RefNo: </strong>SRI/AA/6154
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Colour</th>
+                    <td id="colour" style="padding: 5px; background-color: white;">: Red</td>
+                    <td rowspan="4" colspan="1" style="text-align: center; padding: 5px; background-color: white;">
+                    </td>
+                    <td rowspan="4" colspan="1" style="text-align: center; padding: 5px; background-color: white;">
+                        <img id="imgGem" src="images/loading.gif" alt="Gem Image"
+                            style="max-width: 110px; max-height: 110px; object-fit: contain;">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Weight</th>
+                    <td id="weight" style="padding: 5px; background-color: white;">: 5.50 Rt</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Species/Group</th>
+                    <td id="species" style="padding: 5px; background-color: white;">: Coral</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Shape &amp; Cut</th>
+                    <td id="shapeCut" style="padding: 5px; background-color: white;">: Capsule</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Transparency</th>
+                    <td colspan=2 id="transparency" style="padding: 5px; background-color: white;">: Opaque</td>
+                    <td rowspan="4" colspan="1" style="text-align: center; padding: 5px; background-color: white;">
+                        <img src="images/qr.png" alt="qr code" style="max-width: 90px; max-height: 90px;">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Optic Character</th>
+                    <td colspan=2 id="opticCharacter" style="padding: 5px; background-color: white;">: None</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">R.I</th>
+                    <td colspan=2 id="ri" style="padding: 5px; background-color: white;">: 1.486-1.658</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">S.G</th>
+                    <td colspan=2 id="sg" style="padding: 5px; background-color: white;">: 2.6-2.7</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Hardness</th>
+                    <td id="hardness" style="padding: 5px; background-color: white;">: 3.5</td>
+                    <td id="mm" colspan="" style="text-align: center; padding: 5px; background-color: white;">
+                        <strong>MM:</strong> N/A
+                    </td>
+
+                    <td style="text-align: center; padding: 5px; background-color: white;">
+                        <img class="logo-r" src="images/sign.png" alt="Logo"
+                            style="max-width: 80px; height: auto; background-color: white;">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Inclusions</th>
+                    <td id="inclusions" style="padding: 5px; background-color: white;" colspan="2">: Wood Grain Effect
+                    </td>
+                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; ">V.K. JAIN, GEMOLOGIST</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 5px; background-color: white;">Remark</th>
+                    <td id="remark" style="padding: 5px; background-color: white;" colspan="2">: N-E-H</td>
+                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; "><strong>For, SRI LABS JAIPUR</strong></td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div style="text-align: left; font-weight: bold; font-size: 14px; border: 1px solid #000; border-radius: 18px; padding: 8px; 
+        background-color: #f3f7d6; margin: 10px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);" id="identifyAs">
+            IDENTIFIED AS :- NATURAL:-CORAL (MUNGA)
+        </div>
+    </div>
+
+
+    <!-- Download The Report -->
+
+    <label id="download" style="flex: 1; padding: 10px 20px; background-color: green; color: #fff; cursor: pointer; font-weight: bold; border-radius: 5px; text-align: center; display: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; margin: 10px;">
+        Download Report
+    </label>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#download").on("click", function (e) {
+                e.preventDefault(); // Prevents the default anchor action
+
+                var element = document.getElementById("reportCard");
+
+                if (!element) {
+                    $("#errorField").val("Error: #reportCard element not found.");
+                    return;
+                }
+
+                // Temporarily show the report card
+                element.style.display = "block";
+
+                // Wait for the content to be fully rendered
+                html2canvas(element, { useCORS: true, logging: true })
+                    .then(function (canvas) {
+                        var imageData = canvas.toDataURL("image/jpeg");
+
+                        // Create an invisible temporary link to trigger download
+                        var tempLink = document.createElement('a');
+                        tempLink.href = imageData;
+                        tempLink.download = "GemReport.jpg";
+
+                        // Append the link to the body to trigger the download
+                        document.body.appendChild(tempLink);
+                        tempLink.click();
+
+                        // Remove the temporary link after triggering the download
+                        document.body.removeChild(tempLink);
+
+                        // Hide the report card again after download
+                        // element.style.display = "none";
+
+                        // Clear error field if any
+                        // $("#errorField").val("");
+                    })
+                    .catch(function (error) {
+                        // Handle errors if any
+                        // $("#errorField").val("Error capturing screenshot: " + error.message);
+                        console.error("Error:", error);
+                    });
+            });
+        });
+    </script>
+
+
+
+
+
+
+    <!-- Loading Screen -->
+    <div id="loadingSpinner"
+        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: none; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.5); flex-direction: column;">
+        <div
+            style="width: 10vw; height: 10vw; border: 8px solid #f3f3f3; border-top: 8px solid #3498db; border-radius: 50%; animation: spin 1.5s linear infinite;">
+        </div>
+        <div id="loadingTag"
+            style="margin-top: 10px; font-family: Arial, sans-serif; font-size: 1.2rem; font-weight: bold; color: #555; text-align: center;">
+            Searching...
+        </div>
+    </div>
+
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+
+
+
+
+    <!-- Not Found  -->
+    <div style="height: 20px;"></div>
+
+    <div id="notFound"
+        style="display: none; text-align: center; padding: 50px; background-color: #f8d7da; border-radius: 8px; border: 1px solid #f5c6cb; color: #721c24; font-family: Arial, sans-serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 80%; margin: 0 auto;">
+        <h1>No such record found!</h1>
+    </div>
+    <div style="height: 20px;"></div>
+
+
+
+
+
+    <!-- Search Script -->
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $("form").on("submit", function (event) {
+                event.preventDefault(); // Prevent form from submitting and page reloading
+
+                document.getElementById("loadingSpinner").style.display = "flex";
+                $("#formForSearch").hide();
+
+                // Get the form values and trim any whitespace
+                var reportNo = $("input[name='reportNo']").val().trim();
+                var weight = $("input[name='weight']").val().trim();
+
+                // Fetch all data from the Apps Script
+                $.getJSON("https://script.google.com/macros/s/AKfycby0uS8neN8VpbxnmAIdpJbWF6KbsvvlwgbwrlZBc22FtZmtL12MKKs7JSxLPYEiONpd/exec", function (data) {
+
+                    var Table = "", Rows = "", Columns = "";
+                    var found = false; // Flag to check if matching data is found
+
+                    // Loop through the fetched data
+                    $.each(data, function (key, value) {
+                        // Log the value to see the exact comparison
+                        console.log("Comparing Report No: " + value[1] + " with " + reportNo);
+                        console.log("Comparing Weight: " + value[3] + " with " + weight);
+
+                        // Convert value[3] to string and trim it, then compare
+                        if (value[1].trim() === reportNo && String(value[3]).trim() === weight) {
+                            found = true; // Set the flag to true when data is found
+                            Columns = "";
+                            document.getElementById("identifyAs").innerHTML = "   IDENTIFIED AS :- NATURAL:-" + value[4] + ":-(" + value[0] + ")";
+                            document.getElementById("refNo").innerHTML = "<strong>RefNo: </strong>" + value[1];
+                            document.getElementById("colour").innerHTML = value[2];
+                            document.getElementById("weight").innerHTML = value[3] + " Rt";
+                            document.getElementById("species").innerHTML = value[4];
+                            document.getElementById("shapeCut").innerHTML = value[5];
+                            document.getElementById("transparency").innerHTML = value[6];
+                            document.getElementById("opticCharacter").innerHTML = value[7];
+                            document.getElementById("ri").innerHTML = value[8];
+                            document.getElementById("sg").innerHTML = value[9];
+                            document.getElementById("mm").innerHTML = "<strong>MM:</strong> " + value[10];
+                            document.getElementById("hardness").innerHTML = value[11];
+                            document.getElementById("inclusions").innerHTML = value[12];
+                            document.getElementById("remark").innerHTML = value[13];
+                            document.getElementById("loadingTag").innerHTML = "Loading Image...";
+                            console.log(value[14].replace("/view", "/preview").split('?')[0]);
+                            // document.getElementById("imgGem").src = value[14].replace("/view", "/preview").split('?')[0];
+                            fetchAndSetImage(value[14], "imgGem")
+                            // Create a table row for each matching entry
+                            $.each(value, function (key1, value1) {
+                                Columns = Columns + '<td>' + value1 + '</td>';
+                            });
+
+                            Rows = Rows + '<tr>' + Columns + '</tr>';
+                        }
+                    });
+
+                    // If matching rows are found, append them to the table body
+                    if (Rows) {
+                        $("#TableBody").html(Rows); // Update the table body with matching rows
+                    } else {
+                        $("#TableBody").html('<tr><td colspan="15">No matching data found.</td></tr>'); // Display a message if no data is found
+                    }
+
+                    // Show/hide the divs based on the result
+                    if (found) {
+                        // Show the report card and hide not found and form for search
+                        $("#notFound").hide();
+                        document.getElementById("loadingSpinner").style.display = "none";
+                        $("#formForSearch").hide();
+                        $("#download").show();
+                        $("#reportCard").show();
+                    } else {
+                        // Hide the report card and show not found and form for search
+                        document.getElementById("loadingSpinner").style.display = "none";
+                        $("#reportCard").hide();
+                        $("#notFound").show();
+                        $("#formForSearch").hide();
+                        $("#downloadBtn").hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+<div class="footer" style="background-color: blue; padding: 10px 0;">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="logo2" style="color: white;">
+                <a href="index.php" style="color: white; text-decoration: none;">Sri Labs Jaipur, Uttar Pradesh 208001</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>
