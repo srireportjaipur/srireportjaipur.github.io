@@ -185,7 +185,7 @@
                 </tr>
                 <tr>
                     <th style="text-align: left; padding: 5px; background-color: white;">Weight</th>
-                    <td id="weight" style="padding: 5px; background-color: white;">: 5.50 Rt</td>
+                    <td id="weight" style="padding: 5px; background-color: white;">: 5.50</td>
                 </tr>
                 <tr>
                     <th style="text-align: left; padding: 5px; background-color: white;">Species/Group</th>
@@ -363,7 +363,10 @@
                 // Get the form values and trim any whitespace
                 var reportNo = $("input[name='reportNo']").val().trim();
                 var weight = $("input[name='weight']").val().trim();
-
+                weight = parseFloat(weight.replace(/[^0-9.]/g, "")); // Convert to number
+                weight = weight.toString();
+                
+                
                 // Fetch all data from the Apps Script
                 $.getJSON("https://script.google.com/macros/s/AKfycby0uS8neN8VpbxnmAIdpJbWF6KbsvvlwgbwrlZBc22FtZmtL12MKKs7JSxLPYEiONpd/exec", function (data) {
 
@@ -377,13 +380,13 @@
                         console.log("Comparing Weight: " + value[3] + " with " + weight);
 
                         // Convert value[3] to string and trim it, then compare
-                        if (value[1].trim() === reportNo && String(value[3]).trim() === weight) {
+                        if (value[1].trim() === reportNo && String(parseFloat(value[3].toString().trim().replace(/[^0-9.]/g, "")).toString() === weight)) {
                             found = true; // Set the flag to true when data is found
                             Columns = "";
                             document.getElementById("identifyAs").innerHTML = "   IDENTIFIED AS :- NATURAL:-" + value[4] + ":-(" + value[0] + ")";
                             document.getElementById("refNo").innerHTML = "<strong>RefNo: </strong>" + value[1];
                             document.getElementById("colour").innerHTML = value[2];
-                            document.getElementById("weight").innerHTML = value[3] + " Rt";
+                            document.getElementById("weight").innerHTML = value[3];
                             document.getElementById("species").innerHTML = value[4];
                             document.getElementById("shapeCut").innerHTML = value[5];
                             document.getElementById("transparency").innerHTML = value[6];
@@ -440,7 +443,7 @@
     <div class="container">
         <div class="footer-grids">
             <div class="logo2" style="color: white;">
-                <a href="index.php" style="color: white; text-decoration: none;">Sri Labs Jaipur, Uttar Pradesh 208001</a>
+                <a href="index.php" style="color: white; text-decoration: none;">Sri Labs Jaipur, Rajasthan</a>
             </div>
         </div>
     </div>
