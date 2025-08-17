@@ -365,12 +365,25 @@
         </div>
     </div>
 
-    <!-- Download Button -->
+    <div style="display:flex;justify-content:center;align-items:center;gap:20px;margin-top:50px;">
+
     <button id="downloadButton" type="button" style="
-  display:inline-block;padding:12px 20px;background:#4A90E2;color:#fff;
-  font-size:16px;font-weight:bold;border:0;border-radius:6px;cursor:pointer;">
-        Download Card
+      display:inline-block;padding:12px 20px;background:#4A90E2;color:#fff;
+      font-size:16px;font-weight:bold;border:0;border-radius:6px;cursor:pointer;">
+      Download Card
     </button>
+
+    <a href="collage.html" 
+       style="display:inline-block;padding:12px 24px;font-size:16px;font-weight:bold;
+              text-decoration:none;color:#000;background:#FFD700;border-radius:6px;
+              transition:background 0.3s ease,transform 0.2s ease;"
+       onmouseover="this.style.background='#E6C200';this.style.transform='translateY(-2px)';"
+       onmouseout="this.style.background='#FFD700';this.style.transform='translateY(0)';">
+       Go to Collage
+    </a>
+
+  </div>
+
 
     <!-- html2canvas (only once) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
