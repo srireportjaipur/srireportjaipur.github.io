@@ -54,7 +54,7 @@
                     <a href=""><img id="logoimg" src="images/logo.png" alt="kgtl-logo"></a><a id="logo-text">Sri
                         Labs</br></a>
 
-                    
+
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -73,40 +73,46 @@
 
 
     <!-- Form -->
-    <div class="container" id="formForSearch" style="width: 100%; max-width: 600px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <h3 class="search" style="text-align: center; font-size: 24px; font-weight: bold; color: #388E3C; margin-bottom: 20px;">
+    <div class="container" id="formForSearch"
+        style="width: 100%; max-width: 600px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <h3 class="search"
+            style="text-align: center; font-size: 24px; font-weight: bold; color: #388E3C; margin-bottom: 20px;">
             Search Results
         </h3>
         <div class="grid_3 grid_5">
-            <form action="#" method="get" style="display: flex; flex-direction: column; gap: 15px; background-color:white;">
+            <form action="#" method="get"
+                style="display: flex; flex-direction: column; gap: 15px; background-color:white;">
                 <label style="font-size: 14px; font-weight: bold; color: #333;">Report No:</label>
-                <input type="text" name="reportNo" value="SRI/AA/" required="" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
-    
+                <input type="text" name="reportNo" value="SRI/AA/" required=""
+                    style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
+
                 <label for="service-" style="font-size: 14px; font-weight: bold; color: #333;">Weight:</label>
-                <input type="text" name="weight" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
-    
-                <input type="submit" name="Search" value="Search" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #388E3C; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
-                </form>
+                <input type="text" name="weight"
+                    style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 8px; width: 100%; box-sizing: border-box;">
+
+                <input type="submit" name="Search" value="Search"
+                    style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #388E3C; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+            </form>
         </div>
     </div>
-    
+
     <script>
         // Add hover and active states for the submit button using JavaScript
         const submitButton = document.querySelector('input[type="submit"]');
-        submitButton.addEventListener('mouseover', function() {
+        submitButton.addEventListener('mouseover', function () {
             this.style.backgroundColor = '#2c6e2a';
         });
-        submitButton.addEventListener('mouseout', function() {
+        submitButton.addEventListener('mouseout', function () {
             this.style.backgroundColor = '#388E3C';
         });
-        submitButton.addEventListener('mousedown', function() {
+        submitButton.addEventListener('mousedown', function () {
             this.style.backgroundColor = '#2b5d27';
         });
-        submitButton.addEventListener('mouseup', function() {
+        submitButton.addEventListener('mouseup', function () {
             this.style.backgroundColor = '#2c6e2a';
         });
     </script>
-    
+
 
 
 
@@ -147,8 +153,7 @@
                     </th>
                     <th rowspan="2"
                         style="width: 15%; text-align: center; background-color: white; padding: 10px; border: none;">
-                        <img src="images/diamond.png" alt="Microscope"
-                            style="max-height: 30px;">
+                        <img src="images/diamond.png" alt="Microscope" style="max-height: 30px;">
                     </th>
                 </tr>
                 <tr>
@@ -230,12 +235,14 @@
                     <th style="text-align: left; padding: 5px; background-color: white;">Inclusions</th>
                     <td id="inclusions" style="padding: 5px; background-color: white;" colspan="2">: Wood Grain Effect
                     </td>
-                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; ">V.K. JAIN, GEMOLOGIST</td>
+                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; ">V.K. JAIN,
+                        GEMOLOGIST</td>
                 </tr>
                 <tr>
                     <th style="text-align: left; padding: 5px; background-color: white;">Remark</th>
                     <td id="remark" style="padding: 5px; background-color: white;" colspan="2">: N-E-H</td>
-                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; "><strong>For, SRI LABS JAIPUR</strong></td>
+                    <td style="text-align: center; padding: 5px; background-color: white; color: #388E3C; "><strong>For,
+                            SRI LABS JAIPUR</strong></td>
                 </tr>
             </table>
 
@@ -310,8 +317,8 @@
                 var weight = $("input[name='weight']").val().trim();
                 weight = parseFloat(weight.replace(/[^0-9.]/g, "")); // Convert to number
                 weight = weight.toString();
-                
-                
+
+
                 // Fetch all data from the Apps Script
                 $.getJSON("https://script.google.com/macros/s/AKfycby0uS8neN8VpbxnmAIdpJbWF6KbsvvlwgbwrlZBc22FtZmtL12MKKs7JSxLPYEiONpd/exec", function (data) {
 
@@ -323,9 +330,12 @@
                         // Log the value to see the exact comparison
                         console.log("Comparing Report No: " + value[1] + " with " + reportNo);
                         console.log("Comparing Weight: " + value[3] + " with " + weight);
+                        var currentWeightString = value[3].toString().trim();
+                        var firstNumberMatch = currentWeightString.match(/[\d.]+/); // get first number
+                        var currentWeight = firstNumberMatch ? parseFloat(firstNumberMatch[0]) : NaN;
 
-                        // Convert value[3] to string and trim it, then compare
-                        if (value[1].trim() === reportNo && String(parseFloat(value[3].toString().trim().replace(/[^0-9.]/g, "")).toString() === weight)) {
+                        // Now compare reportNo and weight against currentWeight
+                        if (value[1].trim() === reportNo && currentWeight.toString() === weight) {
                             found = true; // Set the flag to true when data is found
                             Columns = "";
                             document.getElementById("identifyAs").innerHTML = "   IDENTIFIED AS :- NATURAL:-" + value[4] + ":-(" + value[0] + ")";
@@ -343,10 +353,8 @@
                             document.getElementById("inclusions").innerHTML = value[12];
                             document.getElementById("remark").innerHTML = value[13];
                             document.getElementById("loadingTag").innerHTML = "Loading Image...";
-                            console.log(value[14].replace("/view", "/preview").split('?')[0]);
-                            // document.getElementById("imgGem").src = value[14].replace("/view", "/preview").split('?')[0];
-                            fetchAndSetImage(value[14], "imgGem")
-                            // Create a table row for each matching entry
+                            fetchAndSetImage(value[14], "imgGem");
+
                             $.each(value, function (key1, value1) {
                                 Columns = Columns + '<td>' + value1 + '</td>';
                             });
